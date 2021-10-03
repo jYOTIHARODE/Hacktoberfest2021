@@ -1,0 +1,275 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{    
+  int topic,answer,score=0;   
+  cout<<"On which topic you want to start your Quiz :-\n";    
+  cout<<"1) Sports\n2) Science \n3) Maths \n";    
+  cout<<"Choose any one choice : ";   
+  cin>>topic;
+
+if(topic==1)    
+{      
+  cout<<"You have decided to start your quiz on Sports : \n";      
+  cout<<"Here are 5 questons and each questions contains 5 points\n";      
+  cout<<"A. Who is known as the Flying Sikh? "<<endl;      
+  cout<<"1) Michael Johnson\n2) Usain Bolt\n3) Milkha Sing\n4) Carl Lewis "<<endl;      
+  cout<<"Enter your choice : ";      
+  cin>>answer;
+
+if(answer==3)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;     
+}
+            
+cout<<"B. Who is the first Indian Badminton Player to win an Olympic Medal?"<<endl;      
+cout<<"1) Srikanth Kidambi\n2) P.V. Sindhu\n3) P.V. Nehwal\n4) Saina Nehwal "<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;
+
+if(answer==4)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+            
+cout<<"C. What is the National Game of the USA?"<<endl;     
+cout<<"1) Tennis\n2) Soccer\n3) Baseball\n4) Basket Ball "<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;
+      
+if(answer==3)     
+{       
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+            
+cout<<"D. Who is given the Nickname God of Cricket?"<<endl;      
+cout<<"1) Ricky Ponting\n2) MS Dhoni\n3) Sachin Tendulkar\n4) Anil Kumble"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;
+      
+if(answer==3)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}     
+else      
+{
+  cout<<"Ohh! Your answer is Wrong"<<endl;       
+  score=score-5;      
+}           
+cout<<"E. What is the National Game of India?"<<endl;      
+cout<<"1) Kabaddi\n2) Hockey\n3) Cricket\n4) Football"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;     
+
+if(answer==2)      
+{           
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+cout<<"Your Total Score is "<<score;    
+}
+    
+    
+ 
+if(topic==2)   
+{      
+  cout<<"You have decided to start your quiz on Science : \n";      
+  cout<<"Here are 5 questons and each questions contains 5 points\n";      
+  cout<<"A. Which one of the following waves are used by the common TV remote control?"<<endl;      
+  cout<<"1) Radio waves\n2) Lasers\n3) Infrared waves\n4) Ultrasonic waves"<<endl;      
+  cout<<"Enter your choice : ";      
+  cin>>answer;
+      
+if(answer==3)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else     
+{
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+
+          
+cout<<"B. Which law suggested that there should be a planet between Mars and Jupiter?"<<endl;      
+cout<<"1) Bode's Law\n2) Planetary Law\n3) Celestial Law\n4) None of the above "<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;
+      
+if(answer==1)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;       
+  score=score-5;      
+}
+            
+cout<<"C. Asteroids are made up of"<<endl;      
+cout<<"1) Nickel\n2) Iron\n3) Rocks\n4) All the above"<<endl;     
+cout<<"Enter your choice : ";      
+cin>>answer;
+      
+if(answer==4)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}     
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+            
+cout<<"D. Which of the following is the first calculating device?"<<endl;      
+cout<<"1) Abacus\n2) Calculator\n3) Turing Machine\n4) Pascaline"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;  
+
+if(answer==1)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+            
+cout<<"E. Who among the following considered as the father of artificial intelligence?"<<endl;      
+cout<<"1) Charles Babbage\n2) Lee De Forest\n3) John McCarthy\n4) JP Eckert"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer;
+  
+if(answer==3)      
+{           
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}     
+else     
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}               
+cout<<"Your Total Score is "<<score;    
+}
+   
+if(topic==3)    
+{      
+  cout<<"You have decided to start your quiz on Maths : \n";      
+  cout<<"Here are 5 questons and each questions contains 5 points\n";      
+
+  cout<<"A. How many years are there in a decade? "<<endl;      
+  cout<<"1) 5\n2) 10\n3) 15\n4) 20"<<endl;      
+  cout<<"Enter your choice : ";      
+  cin>>answer;      
+
+if(answer==2)     
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;     
+} 
+
+cout<<"B. In a century how many months are there?"<<endl;      
+cout<<"1) 12\n2) 120\n3) 1200\n4) 12000 "<<endl;      
+cout<<"Enter your choice : ";     
+cin>>answer;
+
+if(answer==3)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}     
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}      
+      
+cout<<"C. What is 7% equal to?"<<endl;      
+cout<<"1) 0.007\n2) 0.07\n3) 0.7\n4) 7"<<endl;      
+cout<<"Enter your choice : ";
+cin>>answer;
+      
+if(answer==2)      
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;       
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+} 
+
+
+cout<<"D. If David age is 27 years old in 2011. What was his age in 2003?"<<endl;      
+cout<<"1) 17 years\n2) 37 years\n3) 20 years\n4) 19 years"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer; 
+
+if(answer==4)     
+{        
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}     
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;        
+  score=score-5;      
+}
+            
+cout<<"E. What is three fifth of 100?"<<endl;      
+cout<<"1) 3\n2) 5\n3) 20\n4) 60"<<endl;      
+cout<<"Enter your choice : ";      
+cin>>answer; 
+
+if(answer==4)      
+{           
+  cout<<"Wow! Your answer is Correct."<<endl;        
+  score=score+5;      
+}      
+else      
+{        
+  cout<<"Ohh! Your answer is Wrong"<<endl;       
+  score=score-5;      
+}     
+cout<<"Your Total Score is "<<score;    
+} 
+
+return 0;
+}
