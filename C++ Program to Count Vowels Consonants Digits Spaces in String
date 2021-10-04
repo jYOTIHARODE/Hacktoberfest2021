@@ -1,0 +1,34 @@
+/*  C++ Program to Count Vowels Consonants Digits Spaces in String  */
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+int main()
+{
+    char line[150];
+    int i,v,c,ch,d,s,o;
+    o=v=c=ch=d=s=0;
+
+    cout<<"\nEnter any String :: ";
+    gets(line);
+
+    for(i=0;line[i]!='\0';++i)
+    {
+        if(line[i]=='a' || line[i]=='e' || line[i]=='i' || line[i]=='o' || line[i]=='u' || line[i]=='A' || line[i]=='E' || line[i]=='I' || line[i]=='O' || line[i]=='U')
+            ++v;
+        else if((line[i]>='a'&& line[i]<='z') || (line[i]>='A'&& line[i]<='Z'))
+            ++c;
+        else if(line[i]>='0'&& line[i]<='9')
+            ++d;
+        else if (line[i]==' ')
+            ++s;
+    }
+    cout<<"\nNumber of Vowels :: "<<v<<"\n";
+    cout<<"\nNumber of Consonants :: "<<c<<"\n";
+    cout<<"\nNumber of Digits :: "<<d<<"\n";
+    cout<<"\nNumber of White spaces :: "<<s<<"\n";
+
+    return 0;
+
+}
