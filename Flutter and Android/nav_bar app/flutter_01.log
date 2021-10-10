@@ -1,0 +1,90 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter assemble --no-version-check -dTargetPlatform=darwin-x64 -dTargetFile=/Users/dhanu/Documents/Flutter_app_data/bottom_navigation/lib/main.dart -dBuildMode=debug -dTreeShakeIcons=false -dDartObfuscation=false -dSplitDebugInfo= -dTrackWidgetCreation=true --DartDefines=Zmx1dHRlci5pbnNwZWN0b3Iuc3RydWN0dXJlZEVycm9ycz10cnVl,RkxVVFRFUl9XRUJfQVVUT19ERVRFQ1Q9dHJ1ZQ== --ExtraGenSnapshotOptions= --ExtraFrontEndOptions= --build-inputs=/Users/dhanu/Documents/Flutter_app_data/bottom_navigation/macos/Flutter/ephemeral/FlutterInputs.xcfilelist --build-outputs=/Users/dhanu/Documents/Flutter_app_data/bottom_navigation/macos/Flutter/ephemeral/FlutterOutputs.xcfilelist --output=/Users/dhanu/Documents/Flutter_app_data/bottom_navigation/build/macos/Build/Products/Debug debug_macos_bundle_flutter_assets
+
+## exception
+
+FileSystemException: FileSystemException: Cannot open file, path = '/Users/dhanu/Documents/Flutter_app_data/bottom_navigation/macos/Flutter/ephemeral/FlutterInputs.xcfilelist' (OS Error: No such file or directory, errno = 2)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:635:7)
+#1      _File.openSync (dart:io/file_impl.dart:479:5)
+#2      _File.writeAsBytesSync (dart:io/file_impl.dart:604:31)
+#3      _File.writeAsStringSync (dart:io/file_impl.dart:628:5)
+#4      ForwardingFile.writeAsStringSync (package:file/src/forwarding/forwarding_file.dart:147:16)
+#5      ErrorHandlingFile.writeAsStringSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:267:22)
+#6      _runSync (package:flutter_tools/src/base/error_handling_io.dart:573:14)
+#7      ErrorHandlingFile.writeAsStringSync (package:flutter_tools/src/base/error_handling_io.dart:266:5)
+#8      writeListIfChanged (package:flutter_tools/src/commands/assemble.dart:372:10)
+#9      AssembleCommand.runCommand (package:flutter_tools/src/commands/assemble.dart:340:7)
+<asynchronous suspension>
+#10     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1043:27)
+<asynchronous suspension>
+#11     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#12     CommandRunner.runCommand (package:args/command_runner.dart:196:13)
+<asynchronous suspension>
+#13     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:284:9)
+<asynchronous suspension>
+#14     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#15     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:232:5)
+<asynchronous suspension>
+#16     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:62:9)
+<asynchronous suspension>
+#17     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:150:19)
+<asynchronous suspension>
+#18     main (package:flutter_tools/executable.dart:91:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[!] Flutter (Channel stable, 2.2.3, on macOS 11.5.2 20G95 darwin-arm, locale en-GB)
+    • Flutter version 2.2.3 at /users/dhanu/flutterDev/flutter
+    • Framework revision f4abaa0735 (10 weeks ago), 2021-07-01 12:46:11 -0700
+    • Engine revision 241c87ad80
+    • Dart version 2.13.4
+    ✗ Downloaded executables cannot execute on host.
+      See https://github.com/flutter/flutter/issues/6207 for more information
+
+
+[!] Android toolchain - develop for Android devices (Android SDK version 31.0.0)
+    • Android SDK at /Users/dhanu/Library/Android/sdk
+    • Platform android-31, build-tools 31.0.0
+    • Java binary at: /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_275-b01)
+    ! Some Android licenses not accepted.  To resolve this, run: flutter doctor --android-licenses
+
+[✓] Xcode - develop for iOS and macOS
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 12.3, Build version 12C33
+    • CocoaPods version 1.10.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/macos#android-setup for detailed instructions).
+
+[✓] IntelliJ IDEA Community Edition (version 2021.2.1)
+    • IntelliJ at /Applications/IntelliJ IDEA CE.app
+    • Flutter plugin version 60.1.4
+    • Dart plugin version 212.5080.8
+
+[✓] VS Code (version 1.60.0)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 3.26.0
+
+[✓] Connected device (3 available)
+    • iPhone 12 (mobile) • 3FE672E3-1DFB-497B-9803-524AC86439F9 • ios            • com.apple.CoreSimulator.SimRuntime.iOS-14-3 (simulator)
+    • macOS (desktop)    • macos                                • darwin-arm64   • macOS 11.5.2 20G95 darwin-arm
+    • Chrome (web)       • chrome                               • web-javascript • Google Chrome 92.0.4515.159
+
+! Doctor found issues in 3 categories.
+```
