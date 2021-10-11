@@ -1,0 +1,114 @@
+//PROBLEM STATEMENT-
+
+Given an array of integers and a sum B, find all unique combinations in the array where the sum is equal to B. The same number may be chosen from the array any number of times to make B.
+
+Note:
+        1. All numbers will be positive integers.
+        2. Elements in a combination (a1, a2, …, ak) must be in non-descending order. (ie, a1 ≤ a2 ≤ … ≤ ak).
+        3. The combinations themselves must be sorted in ascending order.
+
+
+Example 1:
+
+Input:
+N = 4
+arr[] = {7,2,6,5}
+B = 16
+Output:
+(2 2 2 2 2 2 2 2)
+(2 2 2 2 2 6)
+(2 2 2 5 5)
+(2 2 5 7)
+(2 2 6 6)
+(2 7 7)
+(5 5 6)
+Example 2:
+
+Input:
+N = 11
+arr[] = {6,5,7,1,8,2,9,9,7,7,9}
+B = 6
+Output:
+(1 1 1 1 1 1)
+(1 1 1 1 2)
+(1 1 2 2)
+(1 5)
+(2 2 2)
+(6)
+
+//SOURCE CODE-
+
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution
+{
+    void calSum(vector<int> A, int sum, vector<int> &temp, int index, vector<vector<int>> &res)
+    {
+        if(sum == 0)
+        {
+            res.push_back(temp);
+            return;
+        }
+        
+        for(int i = index; i < A.size(); i++)
+        {
+            if(sum - A[i] >= 0)
+            {
+                temp.push_back(A[i]);
+                sum = sum - A[i];
+                
+                calSum(A, sum, temp, i, res);
+                
+                sum = sum + A[i];
+                temp.pop_back();
+            }
+        }
+    }
+    
+    public:
+    vector<vector<int>> combinationSum(vector<int> &A, int sum) 
+    {
+        sort(A.begin(), A.end());
+        A.erase(unique(A.begin(), A.end()), A.end());
+        
+        vector<vector<int>> res;
+        vector<int> temp;
+        
+        calSum(A, sum, temp, 0, res);
+        
+        return res;
+    }
+};
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<int> A;
+        for(int i=0;i<n;i++){
+            int x;
+            cin>>x;
+            A.push_back(x);
+        }   
+        int sum;
+        cin>>sum;
+        Solution ob;
+        vector<vector<int>> result = ob.combinationSum(A, sum);
+   		if(result.size()==0){
+   			cout<<"Empty";
+   		}
+        for(int i=0;i<result.size();i++){
+            cout<<'(';
+            for(int j=0;j<result[i].size();j++){
+                cout<<result[i][j];
+                if(j<result[i].size()-1)
+                    cout<<" ";
+            }
+            cout<<")";
+        }
+        cout<<"\n";
+    }
+}	  
