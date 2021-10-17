@@ -1,0 +1,35 @@
+int h(Node *p,int a)
+{
+    if(!p) return -1;
+    int dis=-1;
+    if(p->data==a || (dis= h(p->left,a))>=0 || (dis= h(p->right,a))>=0 )
+    return dis+1;
+    return dis;
+}
+Node *lca(Node *p,int a,int b)
+{
+    if(!p) return nullptr;
+    if(p->data==a || p->data==b)
+    return p;
+    Node *l= lca(p->left,a,b);
+    Node *r= lca(p->right,a,b);
+    if(l && r) return p;
+    if(!l) return r;
+    return l;
+}
+int get(Node * root,int a,int b)
+{
+    Node *lc= lca(root,a,b);
+    int l1= h(root,a);
+    int r1= h(root,b);
+    int lcd= h(root, lc->data);
+    return l1+r1- 2* lcd;
+}
+int findDist(Node* root, int a, int b) 
+{
+    if(!root) return 0;
+    if(root->data== a && root->data==b) return 0;
+    int ans=get(root,a,b);
+    return ans;
+    
+}
