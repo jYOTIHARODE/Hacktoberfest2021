@@ -1,0 +1,47 @@
+static vector<int > v ;
+static  int k;
+void search(vector<int> a)
+{
+    int sum=0;
+    for(int i=a.size()-1;i>=0;i--)
+    {
+        sum+=a[i];
+        if(sum==k)
+        {
+            for(int j=i;j<a.size();j++)
+            {
+                cout<<a[j]<<" ";
+            }
+        }
+        cout<<"\n";
+        
+    }
+    cout<<" --\n";
+    v.pop_back();
+    
+    
+}
+void kpath(node p)
+{
+    if(p!=NULL){
+    
+    v.push_back(p->data);
+    if(p->l!=NULL) kpath(p->l);
+    if(p->r!=NULL) kpath(p->r);
+    if(p->l==NULL && p->r==NULL)
+    {
+        search(v);
+    }
+    else 
+    {
+        search(v);
+    }
+    
+    
+    }
+    
+    
+}
+
+
+
