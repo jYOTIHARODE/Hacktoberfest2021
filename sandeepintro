@@ -1,0 +1,6 @@
+#include<stdio.h>
+
+int main(){
+printf("I am sandeep");
+return 0;
+}
