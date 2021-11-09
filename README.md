@@ -46,6 +46,7 @@ Go through the checklist on the pull request template to guarantee your submissi
 
 
 Please check first and then send your codes with discription.
+Give a try, its Awesome.
 
 **All the best for the event **
 
